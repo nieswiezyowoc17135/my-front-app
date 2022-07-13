@@ -1,7 +1,29 @@
-.options-label {
-    padding: 10px;
-    font-size: 30px;
-}
+/* zajebane z poradnika */
+a {
+    background-color: #3f525c;
+    border-radius: 2px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    min-width: 70px;
+    margin: .5rem auto;
+    box-sizing: border-box;
+    margin-left: 10%;
+    
+  
+    /* flexbox */
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+
+  a:hover {
+    background-color: #000;
+  }
 
 h1 {
     text-align: center;

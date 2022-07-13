@@ -1,7 +1,8 @@
 <h1>Frontend</h1>
-<label class="options-label" >Wybierz opcje:</label>
-<select>
-    <option>Pokaż wszystkie książki</option>
-    <option>Pokaż formularz dodawania książki do bazy</option>
-    <option>Pokaż formularz usuwania książki z bazy</option>
-</select>
+<nav>
+    <a routerLink="/allBooks">Pobierz wszystki książki</a>
+    <a routerLink="/idBook">Pobierz przy pomocy ID</a>
+    <a routerLink="/addBook">Dodaj książkę</a>
+    <a routerLink="/deleteBook">Usuń książkę</a>
+</nav>
+<router-outlet></router-outlet>
