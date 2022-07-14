@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookIdComponent } from './components/book-id/book-id.component';
 import { FormsModule } from '@angular/forms';
 import { BookAddComponent } from './components/book-add/book-add.component';
+import { BookDeleteComponent } from './components/book-delete/book-delete.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BookAddComponent } from './components/book-add/book-add.component';
     BookOptionsComponent,
     BooksComponent,
     BookIdComponent,
-    BookAddComponent
+    BookAddComponent,
+    BookDeleteComponent
   ],
   imports: [
     BrowserModule,

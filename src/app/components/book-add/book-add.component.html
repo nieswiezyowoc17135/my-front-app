@@ -1,9 +1,15 @@
 <form>
-    <br><label >Podaj ID książki:</label><br>
     <div>
-      <input type="number"><br><br>
+    <br><label >Podaj ID książki:</label><br>
+      
+      <input type="number" [(ngModel)]="book.id" name="bookId"><br><br>
+      <label >Podaj autora:</label><br>
+      <input type="text" [(ngModel)]="book.author" name="bookAuthor"><br><br>
+      <label >Podaj ISBN:</label><br>
+      <input type="text" [(ngModel)]="book.isbn" name="bookIsbn"><br><br>
+
       <div class="vertical-center">
-        <button>Dodaj</button>
+        <button (click)="addBook()">Dodaj</button>
       </div>
     </div>
 </form> <br><br><br>
