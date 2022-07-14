@@ -2,14 +2,14 @@
     <div>
     <br><label >Podaj ile pominąć:</label><br>
       
-      <input type="number"><br><br>
+      <input type="number" [(ngModel)]="fileData.skip" name="fileSkip"><br><br>
       <label >Podaj słowo klucz:</label><br>
-      <input type="text"><br><br>
+      <input type="text" [(ngModel)]="fileData.word" name="fileWord"><br><br>
       <label >Podaj ile książek wstawić do pliku:</label><br>
-      <input type="number"><br><br>
+      <input type="number" [(ngModel)]="fileData.take" name="fileTake"><br><br>
 
       <div class="vertical-center">
-        <button>Generuj</button>
+        <button (click)="generateFile()">Generuj</button>
       </div>
     </div>
 </form> <br><br><br>
