@@ -7,18 +7,24 @@ import { AppComponent } from './app.component';
 import { BookOptionsComponent } from './components/book-options/book-options.component';
 import { BooksComponent } from './components/books/books.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BookIdComponent } from './components/book-id/book-id.component';
+import { FormsModule } from '@angular/forms';
+import { BookAddComponent } from './components/book-add/book-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookOptionsComponent,
-    BooksComponent
+    BooksComponent,
+    BookIdComponent,
+    BookAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

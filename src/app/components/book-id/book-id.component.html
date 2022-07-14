@@ -1,0 +1,21 @@
+<form>
+    <br><label >Podaj ID książki:</label><br>
+    <div>
+      <input type="number" [(ngModel)]="bookId" name="bookId" ><br><br>
+      <div class="vertical-center">
+        <button (click)="getBook()">Podaj ID</button>
+      </div>
+    </div>
+</form> <br><br><br>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Author</th>
+    <th>ISBN</th>
+  </tr>
+  <tr>
+    <td>{{book.id}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.isbn}}</td>
+  </tr>
+</table>
