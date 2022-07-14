@@ -1,0 +1,13 @@
+.vertical-center {
+    width: 20vw;
+    margin-left : 48vw;
+  }
+
+  input {
+    width: 20vw;
+    margin-left : 39vw;   
+}
+
+label {
+    margin-left: 39vw;
+}
