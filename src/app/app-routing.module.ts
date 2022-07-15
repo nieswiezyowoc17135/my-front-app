@@ -5,6 +5,7 @@ import { BookDeleteComponent } from './components/book-delete/book-delete.compon
 import { BookIdComponent } from './components/book-id/book-id.component';
 import { BooksComponent } from './components/books/books.component';
 import { FileCreateComponent } from './components/file-create/file-create.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 const routes: Routes = [
   { path: 'allBooks', component: BooksComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'addBook', component: BookAddComponent},
   { path: 'deleteBook', component: BookDeleteComponent},
   { path: 'fileCreate', component: FileCreateComponent},
+  { path: 'fileUpload', component: FileUploadComponent },
   { path: '', redirectTo: '', pathMatch: 'full' }
 
 ];

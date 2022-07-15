@@ -16,8 +16,18 @@ export class FileCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  generateFile() {
-    this.fileService.createFile(this.fileData.skip, this.fileData.take, this.fileData.word).subscribe();
+  generateFile(): void {
+    this.fileService.createFile(this.fileData.skip, this.fileData.take, this.fileData.word).subscribe(
+      response => {
+        let fileName = response.headers.get('content-disposition')
+        ?.split(';')[1].split('=')[1];
+        let blob:Blob = response.body as Blob;
+        let a = document.createElement('a');
+        a.download = fileName;
+        a.href = window.URL.createObjectURL(blob);
+        a.click();
+      }
+    );
   }
 
 }

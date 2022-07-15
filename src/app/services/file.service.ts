@@ -7,13 +7,24 @@ import { File } from '../models/file';
 export class FileService {
 
   private fileUrl = 'https://localhost:7249/api/File?take='
+  private fileUrlUpload = 'https://localhost:7249/api/File'
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  createFile(skip: number, take: number, word: string) : Observable<File> {
-    return this.http.get<File>(this.fileUrl+take+'&skip='+skip+'&word='+word);
+  createFile(skip: number, take: number, word: string) : Observable<any> {
+    return this.http.get(this.fileUrl+take+'&skip='+skip+'&word='+word,
+    {
+      observe:"response",
+      responseType:"blob"
+    })
+  }
+
+  uploadFile(file: any){
+    let formData = new FormData();
+    formData.append('filePath', file);
+    return this.http.post(this.fileUrlUpload, formData)
   }
 
   constructor(
