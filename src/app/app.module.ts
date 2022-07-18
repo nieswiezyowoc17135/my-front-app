@@ -15,6 +15,12 @@ import { FileCreateComponent } from './components/file-create/file-create.compon
 import { FileOptionsComponent } from './components/file-options/file-options.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { LoginComponent } from './components/login/login.component';
+import { JwtModule } from '@auth0/angular-jwt'
+import { AuthGuardService } from './guards/auth-guard.service';
+
+export function tokenGetter() {
+  return localStorage.getItem("jwt");
+}
 
 @NgModule({
   declarations: [
@@ -34,9 +40,18 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    //importy potrzebne do poprawnego dzialania frameworku zwiazanego z JWT
+    JwtModule.forRoot({
+      config : {
+        tokenGetter : tokenGetter,
+        // podawanie portu do backendu
+        allowedDomains : ["localhost:7249"],
+        disallowedRoutes: []
+      }
+    })
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

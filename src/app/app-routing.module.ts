@@ -6,14 +6,16 @@ import { BookIdComponent } from './components/book-id/book-id.component';
 import { BooksComponent } from './components/books/books.component';
 import { FileCreateComponent } from './components/file-create/file-create.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { JwtModule } from '@auth0/angular-jwt'
+import { AuthGuardService } from './guards/auth-guard.service';
 
 const routes: Routes = [
-  { path: 'allBooks', component: BooksComponent},
-  { path: 'idBook', component: BookIdComponent},
-  { path: 'addBook', component: BookAddComponent},
-  { path: 'deleteBook', component: BookDeleteComponent},
-  { path: 'fileCreate', component: FileCreateComponent},
-  { path: 'fileUpload', component: FileUploadComponent },
+  { path: 'allBooks', component: BooksComponent, canActivate:[AuthGuardService]},
+  { path: 'idBook', component: BookIdComponent, canActivate:[AuthGuardService]},
+  { path: 'addBook', component: BookAddComponent, canActivate:[AuthGuardService]},
+  { path: 'deleteBook', component: BookDeleteComponent , canActivate:[AuthGuardService]},
+  { path: 'fileCreate', component: FileCreateComponent, canActivate:[AuthGuardService]},
+  { path: 'fileUpload', component: FileUploadComponent, canActivate:[AuthGuardService]},
   { path: '', redirectTo: '', pathMatch: 'full' }
 
 ];

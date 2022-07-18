@@ -13,18 +13,7 @@ export class LoginService {
 
   //metoda1
   loginServiceMethod(login: Login) {
-    
-    const credentials = {
-      'username' : login.username,
-      'password' : login.password
-    }
-
-    //metoda do wylogowywania
-    //loginOutServiceMethod() {
-    //  localStorage.removeItem("jwt");
-   // }
-
-    return this.http.post(this.loginUrl, credentials);
+    return this.http.post(this.loginUrl, login);
   }
 
   constructor(
