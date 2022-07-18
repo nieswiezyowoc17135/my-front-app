@@ -14,6 +14,7 @@ import { BookDeleteComponent } from './components/book-delete/book-delete.compon
 import { FileCreateComponent } from './components/file-create/file-create.component';
 import { FileOptionsComponent } from './components/file-options/file-options.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     BookDeleteComponent,
     FileCreateComponent,
     FileOptionsComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

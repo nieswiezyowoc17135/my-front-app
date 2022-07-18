@@ -1,0 +1,19 @@
+<div class="center">
+    <h2 class="form-singing-heading">Login</h2>
+    <div *ngIf="invalidLogin">Invalid username or password</div>
+    <div *ngIf="loginChecker">You are logged in</div>    
+    <div *ngIf="logoutChecker">You are logged out</div>
+    <br>
+    <label>Username</label>
+    <br>
+    <input  type="text" placeholder="Type username" [(ngModel)]="loginData.username" name="loginDataUsername">
+    <br><br>
+    <label>Password</label>
+    <br>
+    <input type="text" placeholder="Type password" [(ngModel)]="loginData.password" name="loginDataPassword">
+    <br><br>
+
+    <button (click)="loginTo()">Zaloguj się</button><br><br>
+    <button (click)="loginOut()">Wyloguj się</button>
+    <br><br>
+</div>
