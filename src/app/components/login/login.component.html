@@ -2,7 +2,7 @@
     <h2 class="form-singing-heading">Login</h2>
     <div *ngIf="invalidLogin">Invalid username or password</div>
     <div *ngIf="loginChecker">You are logged in</div>    
-    <div *ngIf="logoutChecker">You are logged out</div>
+    <div *ngIf="!loginChecker">You are logged out</div>
     <br>
     <label>Username</label>
     <br>

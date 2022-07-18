@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   token: any = "";
   invalidLogin: boolean = false;
   loginChecker: boolean = false;
-  logoutChecker: boolean = false;
   loginData: Login = {username: "username", password:"password"};
 
   loginTo()  {
@@ -34,7 +33,6 @@ export class LoginComponent implements OnInit {
 
   loginOut() {
     localStorage.removeItem("jwt");
-    this.logoutChecker = true;
     this.loginChecker = false;
   }
 
